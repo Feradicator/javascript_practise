@@ -1,10 +1,18 @@
-async function getData() {
-    let response = await fetch("https://jsonplaceholder.typicode.com/users");
-    return response.json(); // Call the .json() method to parse the JSON
-}
 
-getData().then(data => {
-    console.log(data);
-}).catch(error => {
-    console.error('Error:', error);
-});
+function getData(data)
+{
+    console.log(`fetching ${data}`)
+    setTimeout(()=>{
+        console.log(`data ${data} fetched`)
+    },2000);
+    
+}
+async function fun()
+{
+    res1= getData(1);
+    res1= getData(2);
+    res1=                                                             getData(3);
+
+
+}
+fun()
